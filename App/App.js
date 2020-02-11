@@ -6,14 +6,16 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React from 'react';
+import {Provider} from 'react-redux';
+import store from '../App/store';
 import Login from './components/Login';
 
 const App = () => {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Login />
-    </Fragment>
+    </Provider>
   );
 };
 
