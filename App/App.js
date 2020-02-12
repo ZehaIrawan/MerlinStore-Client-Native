@@ -8,13 +8,13 @@
 
 import React from 'react';
 import {Provider} from 'react-redux';
+import Navigation from '../App/Navigation';
 import store from '../App/store';
-import Login from './components/Login';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <Login />
+      <Navigation />
     </Provider>
   );
 };
