@@ -2,8 +2,7 @@ import {setCurrentUser} from '../actions/user';
 import {sendRequest} from '../services/api';
 
 export const login = params => async dispatch => {
-  console.log(params);
-  const path = 'v1/login';
+  const path = 'api/auth';
 
   try {
     const res = await sendRequest('post', path, params);
@@ -11,7 +10,7 @@ export const login = params => async dispatch => {
     dispatch(
       setCurrentUser({
         authenticated: true,
-        data: user,
+        token: token,
       }),
     );
     return user;

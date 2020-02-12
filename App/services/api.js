@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const baseUrl = 'http://10.0.2.2:8000';
+const baseUrl = 'http://10.0.2.2:5000';
 
 export const sendRequest = async (method, path, data) => {
-  console.log(method, path, data);
   const result = await axios[method](`${baseUrl}/${path}`, data);
+
   return result;
 };
 

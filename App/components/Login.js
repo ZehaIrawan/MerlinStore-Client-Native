@@ -5,8 +5,8 @@ import {Button, Input, Loading, TextLink} from '../common';
 import {login} from '../thunk/user';
 
 const Login = ({authSwitch, login, isAuthenticated}) => {
-  const [email, setEmail] = useState('t@gmail.com');
-  const [password, setPassword] = useState('t');
+  const [email, setEmail] = useState('jangkaringbumi@gmail.com');
+  const [password, setPassword] = useState('123456');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -74,8 +74,8 @@ const styles = {
   },
 };
 
-const mapStateToProps = state => {
-  isAuthenticated: state.currentUser.authenticated;
-};
+const mapStateToProps = state => ({
+  isAuthenticated: state.currentUser.authenticated,
+});
 
-export default connect(null, {login})(Login);
+export default connect(mapStateToProps, {login})(Login);
