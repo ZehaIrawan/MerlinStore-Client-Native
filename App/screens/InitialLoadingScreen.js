@@ -11,11 +11,11 @@ const InitialLoadingScreen = ({isAuthenticated, navigation}) => {
     // Load the home screen for the logged in users
     if (isAuthenticated) {
       console.warn('SUCCESS');
-      return navigation.navigate('home');
+      return navigation.navigate('dashboard');
     }
 
     // load the Auth screen if the user is NOT logged in
-    navigation.navigate('login');
+    navigation.navigate('home');
     console.log('FAIL');
   };
 
