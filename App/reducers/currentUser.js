@@ -1,8 +1,7 @@
 import {SET_CURRENT_USER} from '../actions/types';
 
 const initialState = {
-  authenticated: false,
-  data: {},
+  isAuthenticated: false,
   token: null,
 };
 

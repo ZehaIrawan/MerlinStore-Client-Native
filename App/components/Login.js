@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Button, Input, Loading, TextLink} from '../common';
 import {login} from '../thunk/user';
 
-const Login = ({authSwitch, login, isAuthenticated}) => {
+const Login = ({authSwitch, login, isAuthenticated, navigation}) => {
   const [email, setEmail] = useState('jangkaringbumi@gmail.com');
   const [password, setPassword] = useState('123456');
   const [error, setError] = useState('');
@@ -19,6 +19,9 @@ const Login = ({authSwitch, login, isAuthenticated}) => {
       console.warn(err);
     }
   };
+  if (isAuthenticated) {
+    return navigation.navigate('home');
+  }
 
   return (
     <Fragment>
