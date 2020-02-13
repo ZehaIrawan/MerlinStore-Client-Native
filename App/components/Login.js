@@ -16,7 +16,7 @@ const Login = ({authSwitch, login, isAuthenticated, navigation}) => {
     try {
       const user = await login({email, password});
     } catch (err) {
-      console.warn(err);
+      console.log('Invalid credential');
     }
   };
   if (isAuthenticated) {
@@ -53,7 +53,9 @@ const Login = ({authSwitch, login, isAuthenticated, navigation}) => {
           <Loading size={'large'} />
         )}
       </View>
-      <TextLink onPress={authSwitch}>Don't have an account? Register!</TextLink>
+      <TextLink onPress={() => navigation.navigate('register')}>
+        Don't have an account? Register!
+      </TextLink>
     </Fragment>
   );
 };
