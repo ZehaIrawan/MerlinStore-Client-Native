@@ -20,7 +20,7 @@ const Login = ({authSwitch, login, isAuthenticated, navigation}) => {
     }
   };
   if (isAuthenticated) {
-    return navigation.navigate('home');
+    return navigation.navigate('dashboard');
   }
 
   return (

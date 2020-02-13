@@ -1,8 +1,13 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, {Fragment} from 'react';
+import {Button, Text} from 'react-native';
 
 const Dashboard = () => {
-  return <Text>Dashboard</Text>;
+  return (
+    <Fragment>
+      <Text>Dashboard</Text>
+      <Button title="Logout"></Button>
+    </Fragment>
+  );
 };
 
 export default Dashboard;
